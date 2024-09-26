@@ -6,7 +6,7 @@
       },
       {
         "endpoint": "introduction",
-        "priority": 1
+        "priority": 10
       }
     ]
   }

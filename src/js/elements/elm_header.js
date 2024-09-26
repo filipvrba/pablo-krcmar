@@ -15,7 +15,7 @@ export default class ElmHeader extends HTMLElement {
 <nav class='navbar navbar-expand-lg'>
   <div class='container'>
     <a class='navbar-brand' href='#' onclick='headerHide()'>
-      <!-- <img src='/png/logo_pivnice-256x256.png' alt='${this._title}' style='height: 64px;'> -->
+      <img src='/png/spain.png' alt='${this._title}' style='height: 64px;'>
       ${this._title}
     </a>
     <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
