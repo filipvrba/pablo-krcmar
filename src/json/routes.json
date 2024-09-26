@@ -1,14 +1,12 @@
 {
     "pages": [
       {
-        "title": "Error",
         "endpoint": "error",
         "priority": 0
       },
       {
-        "title": "Úvod",
-        "endpoint": "uvod",
-        "priority": 10
+        "endpoint": "introduction",
+        "priority": 1
       }
     ]
   }

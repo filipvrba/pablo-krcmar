@@ -43,14 +43,14 @@ export default class ElmRoutes < HTMLElement
 
   def init_elm(content, page = nil)
     template = """
-    #{content.sub('TITLE', page.title) if page}
+    #{content.sub('TITLE', Language.relevant.titles[page.endpoint]) if page}
     """
 
     self.innerHTML = template
   end
 
   def init_meta(page)
-    title = "#{page.title} | #{@title_app}"
+    title = "#{Language.relevant.titles[page.endpoint]} | #{@title_app}"
 
     # Title
     document.title = title

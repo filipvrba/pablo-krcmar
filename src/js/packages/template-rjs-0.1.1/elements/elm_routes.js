@@ -42,14 +42,14 @@ export default class ElmRoutes extends HTMLElement {
   initElm(content, page=null) {
     let template = `${`\n    ${page ? content.replace(
       "TITLE",
-      page.title
+      Language.relevant.titles[page.endpoint]
     ) : null}\n    `}`;
 
     return this.innerHTML = template
   };
 
   initMeta(page) {
-    let title = `${page.title} | ${this._titleApp}`;
+    let title = `${Language.relevant.titles[page.endpoint]} | ${this._titleApp}`;
     return document.title = title
   }
 }
