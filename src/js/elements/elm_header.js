@@ -1,7 +1,12 @@
 export default class ElmHeader extends HTMLElement {
   constructor() {
     super();
-    this._title = document.title.split("|")[document.title.split("|").length - 1].trim();
+
+    this._title = document.title.split("|")[document.title.split("|").length - 1].trim().replace(
+      / -.*$/m,
+      ""
+    );
+
     this.initElm();
     window.headerHide = this.hide.bind(this)
   };

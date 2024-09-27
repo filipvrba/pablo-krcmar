@@ -2,7 +2,7 @@ export default class ElmHeader < HTMLElement
   def initialize
     super
     
-    @title = document.title.split('|').last.strip
+    @title = document.title.split('|').last.strip.sub(/ -.*$/, '')
 
     init_elm()
 

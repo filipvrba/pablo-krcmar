@@ -3,7 +3,7 @@ export default class ElmFooter < HTMLElement
     super
     
     @year  = self.get_attribute('year')
-    @title = document.title.split('|').last.strip
+    @title = document.title.split('|').last.strip.sub(/ -.*$/, '')
     @words = Language.relevant.footer
 
     init_elm()
