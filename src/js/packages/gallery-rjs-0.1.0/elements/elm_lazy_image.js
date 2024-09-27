@@ -13,7 +13,7 @@ export default class ElmLazyImage extends HTMLElement {
     this._srcSmall = this._src.replace(/\..*$/m, "-small$&");
     this._alt = this.getAttribute("alt");
     this._style = this.getAttribute("style");
-    this._class = this.getAttribute("class");
+    this._class = this.getAttribute("classt");
     this.initElm();
     this._blurredImageDiv = document.getElementById(this._id);
     this._img = this._blurredImageDiv.querySelector("img")

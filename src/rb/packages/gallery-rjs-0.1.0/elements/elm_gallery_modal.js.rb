@@ -1,3 +1,5 @@
+import ['ENVS'], './elm_gallery'
+
 export default class ElmGalleryModal < HTMLElement
   def initialize
     super

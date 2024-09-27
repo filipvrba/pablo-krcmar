@@ -1,3 +1,5 @@
+import { ENVS } from "./elm_gallery";
+
 export default class ElmGalleryModal extends HTMLElement {
   constructor() {
     super();

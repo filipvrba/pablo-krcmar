@@ -13,7 +13,7 @@ export default class ElmLazyImage < HTMLElement
     @src_small = @src.sub(/\..*$/, "-small$&")
     @alt       = self.get_attribute('alt')
     @style     = self.get_attribute('style')
-    @class     = self.get_attribute('class')
+    @class     = self.get_attribute('classt')
 
     init_elm()
 
