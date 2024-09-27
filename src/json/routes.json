@@ -1,12 +1,24 @@
 {
-    "pages": [
-      {
-        "endpoint": "error",
-        "priority": 0
-      },
-      {
-        "endpoint": "introduction",
-        "priority": 10
-      }
-    ]
-  }
+  "pages": [
+    {
+      "endpoint": "error",
+      "priority": 0
+    },
+    {
+      "endpoint": "introduction",
+      "priority": 10
+    },
+    {
+      "endpoint": "services",
+      "priority": 1
+    },
+    {
+      "endpoint": "gallery",
+      "priority": 1
+    },
+    {
+      "endpoint": "contact",
+      "priority": 1
+    }
+  ]
+}

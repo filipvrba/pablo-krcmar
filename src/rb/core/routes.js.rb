@@ -4,10 +4,16 @@ window.ROUTES_JSON = routes_obj
 
 import 'errorHTML', '../../html/error.html?raw'
 import 'introductionHTML', '../../html/introduction.html?raw'
+import 'servicesHTML', '../../html/services.html?raw'
+import 'galleryHTML', '../../html/gallery.html?raw'
+import 'contactHTML', '../../html/contact.html?raw'
 
 window.PAGES = {
   error: errorHTML,
   introduction: introductionHTML,
+  services: servicesHTML,
+  gallery: galleryHTML,
+  contact: contactHTML,
 }
 
 class Routes

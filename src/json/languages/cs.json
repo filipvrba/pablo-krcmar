@@ -1,7 +1,10 @@
 {
   "titles": {
     "error": "Chyba",
-    "introduction": "Úvod"
+    "introduction": "Úvod",
+    "services": "Služby",
+    "gallery": "Galerie",
+    "contact": "Kontakt"
   },
   "footer": [
     "Všechna práva vyhrazena."
