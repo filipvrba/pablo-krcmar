@@ -7,3 +7,6 @@ window.custom_elements.define('elm-header', ElmHeader)
 
 import 'ElmFooter', './elements/elm_footer'
 window.custom_elements.define('elm-footer', ElmFooter)
+
+import 'ElmWeatherRadar', './elements/elm_weather_radar'
+window.custom_elements.define('elm-weather-radar', ElmWeatherRadar)
