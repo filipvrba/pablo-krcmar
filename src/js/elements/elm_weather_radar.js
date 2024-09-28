@@ -61,7 +61,7 @@ export default class ElmWeatherRadar extends HTMLElement {
     this._humidity.innerText = `${weatherObj.main.humidity}%`;
     this._wind.innerText = `${weatherObj.wind.speed} m/s`;
     let iconCode = weatherObj.weather[0].icon;
-    return this._weatherIcon.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`
+    return this._weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`
   };
 
   kelvinToCelsius(temperature) {

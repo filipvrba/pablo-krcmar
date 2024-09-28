@@ -64,7 +64,7 @@ export default class ElmWeatherRadar < HTMLElement
     @wind.inner_text = "#{weather_obj.wind.speed} m/s"
 
     icon_code = weather_obj.weather[0].icon
-    @weather_icon.src = "http://openweathermap.org/img/wn/#{icon_code}@2x.png"
+    @weather_icon.src = "https://openweathermap.org/img/wn/#{icon_code}@2x.png"
   end
 
   def kelvin_to_celsius(temperature)
