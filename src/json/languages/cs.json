@@ -8,5 +8,12 @@
   },
   "footer": [
     "Všechna práva vyhrazena."
+  ],
+  "weatherRadar": [
+    "Počasí",
+    "Teplota",
+    "Pocitová teplota",
+    "Vlhkost",
+    "Vítr"
   ]
 }
