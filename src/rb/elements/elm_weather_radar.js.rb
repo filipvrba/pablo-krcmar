@@ -11,6 +11,7 @@ export default class ElmWeatherRadar < HTMLElement
 
     @city_name    = self.query_selector('#cityName')
     @weather_icon = self.query_selector('#weatherIcon')
+    @description  = self.query_selector('#description')
     @temperature  = self.query_selector('#temperature')
     @feels_like   = self.query_selector('#feelsLike')
     @humidity     = self.query_selector('#humidity')
@@ -38,6 +39,7 @@ export default class ElmWeatherRadar < HTMLElement
         <div class='card-body'>
           <h3 id='cityName' class='card-title'>Valencia</h3>
           <img id='weatherIcon' class='' src='' alt='Weather' />
+          <p id='description' class='card-text'></p>
           <p class='card-text'><strong>#{@words[1]}:</strong> <span id='temperature'></span></p>
           <p class='card-text'><strong>#{@words[2]}:</strong> <span id='feelsLike'></span></p>
           <p class='card-text'><strong>#{@words[3]}:</strong> <span id='humidity'></span></p>
@@ -54,6 +56,7 @@ export default class ElmWeatherRadar < HTMLElement
 
   def subinit_elm(weather_obj)
     @city_name.inner_text = weather_obj.name
+    @description.inner_text = @words[5][weather_obj.weather[0].description]
 
     temp_in_celsius = kelvin_to_celsius(weather_obj.main.temp)
     @temperature.inner_text = "#{temp_in_celsius} °C"

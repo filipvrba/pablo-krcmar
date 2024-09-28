@@ -7,6 +7,7 @@ export default class ElmWeatherRadar extends HTMLElement {
     this.initElm();
     this._cityName = this.querySelector("#cityName");
     this._weatherIcon = this.querySelector("#weatherIcon");
+    this._description = this.querySelector("#description");
     this._temperature = this.querySelector("#temperature");
     this._feelsLike = this.querySelector("#feelsLike");
     this._humidity = this.querySelector("#humidity");
@@ -39,6 +40,7 @@ export default class ElmWeatherRadar extends HTMLElement {
         <div class='card-body'>
           <h3 id='cityName' class='card-title'>Valencia</h3>
           <img id='weatherIcon' class='' src='' alt='Weather' />
+          <p id='description' class='card-text'></p>
           <p class='card-text'><strong>${this._words[1]}:</strong> <span id='temperature'></span></p>
           <p class='card-text'><strong>${this._words[2]}:</strong> <span id='feelsLike'></span></p>
           <p class='card-text'><strong>${this._words[3]}:</strong> <span id='humidity'></span></p>
@@ -54,6 +56,7 @@ export default class ElmWeatherRadar extends HTMLElement {
 
   subinitElm(weatherObj) {
     this._cityName.innerText = weatherObj.name;
+    this._description.innerText = this._words[5][weatherObj.weather[0].description];
     let tempInCelsius = this.kelvinToCelsius(weatherObj.main.temp);
     this._temperature.innerText = `${tempInCelsius} °C`;
     let feelsInCelsius = this.kelvinToCelsius(weatherObj.main.feels_like);

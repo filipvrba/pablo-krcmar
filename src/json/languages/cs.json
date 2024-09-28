@@ -14,6 +14,17 @@
     "Teplota",
     "Pocitová teplota",
     "Vlhkost",
-    "Vítr"
+    "Vítr",
+    {
+      "clear sky": "Jasná obloha",
+      "few clouds": "Málo mraků",
+      "scattered clouds": "Rozptýlená oblačnost",
+      "broken clouds": "Roztrhané mraky",
+      "shower rain": "Déšť",
+      "rain": "Déšť",
+      "thunderstorm": "Bouřka",
+      "snow": "Sněžení",
+      "mist": "Mlha"
+    }
   ]
 }
