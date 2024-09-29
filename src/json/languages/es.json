@@ -1,0 +1,104 @@
+{
+  "titles": {
+    "error": "Error",
+    "introduction": "Introducción",
+    "services": "Servicios",
+    "gallery": "Galería",
+    "contact": "Contacto"
+  },
+  "footer": [
+    "Todos los derechos reservados."
+  ],
+  "galleryPagination": [
+    "Anterior",
+    "Siguiente"
+  ],
+  "weatherRadar": [
+    "Clima",
+    "Temperatura",
+    "Sensación térmica",
+    "Humedad",
+    "Viento",
+    {
+      "clear sky": "Cielo despejado",
+      "few clouds": "Pocas nubes",
+      "scattered clouds": "Nubes dispersas",
+      "broken clouds": "Nubes fragmentadas",
+      "shower rain": "Lluvia",
+      "rain": "Lluvia",
+      "thunderstorm": "Tormenta",
+      "snow": "Nieve",
+      "mist": "Niebla"
+    }
+  ],
+  "introduction": [
+    "Sus servicios de viaje personalizados en España",
+    "Le ofrezco experiencias de viaje personales y únicas en la ciudad de Jávea, ubicada en la hermosa provincia de Alicante y Valencia.",
+    "Alquiler de coche",
+    "Posibilidad de alquilar un coche para viajar cómodamente, ya sea solo o en familia.",
+    "Alojamiento",
+    "Le consigo alojamiento en apartamentos o hoteles de calidad, o le ofrezco una opción más económica hospedándose en mi casa.",
+    "Transporte entre lugares",
+    "Proporciono transporte personal a través de hermosos destinos turísticos.",
+    "Guía turístico",
+    "Le mostraré lo mejor que España tiene para ofrecer: hermosas playas, lagos y atracciones locales."
+  ],
+  "introductionTourism": [
+    "Atracciones turísticas que puedo mostrarle",
+    "Como su guía personal, le llevaré a algunas de las playas más hermosas, vistas al mar y un encantador lago en España.",
+    "Hermosas playas",
+    "Disfrute de playas de arena espectaculares, donde podrá nadar, relajarse o caminar por la costa.",
+    "Lago",
+    "Visite un hermoso lago español que ofrece un entorno tranquilo y una gran oportunidad para relajarse.",
+    "Mar y vistas",
+    "Ofrezco paseos a lo largo de la costa con vistas inolvidables del mar y el horizonte."
+  ],
+  "services": [
+    "Información detallada sobre mis servicios",
+    "He preparado una amplia gama de servicios para que disfrute plenamente de sus vacaciones en España. También puede aprovechar los viajes en invierno, cuando el clima sigue siendo cálido y agradable. Hay muchos lugares que vale la pena ver, tanto en verano como en invierno. Disfrutará de la relajación junto al mar, el aire puro y la excelente gastronomía de los restaurantes locales.",
+    [
+      {
+        "name": "Alquiler de coche",
+        "description": "¿Necesita transporte confiable durante su estancia en España? Ofrezco la posibilidad de alquilar un coche cómodo para hasta 7 personas. Puedo entregarle el coche o recogerle directamente en el aeropuerto de Alicante o Valencia, garantizando la máxima comodidad y flexibilidad durante sus vacaciones. Evite el estrés de buscar transporte y comience a explorar las bellezas de España de inmediato.",
+        "points": [
+          "Coche para hasta 7 personas",
+          "Entrega en el aeropuerto (Alicante, Valencia) o recogida",
+          "Alquiler flexible según sus necesidades"
+        ]
+      },
+      {
+        "name": "Alojamiento",
+        "description": "¿Busca alojamiento que se ajuste a sus expectativas? Le proporcionaré un alojamiento cómodo en apartamentos o hoteles cerca de los lugares más interesantes. Ya sea que prefiera apartamentos tranquilos junto al mar o un hotel de lujo en la ciudad, me aseguraré de que el alojamiento se ajuste a sus necesidades.",
+        "points": [
+          "Varios tipos de alojamiento: apartamentos, hoteles",
+          "Cercanía a playas y lugares atractivos",
+          "Alojamiento personalizado según sus preferencias"
+        ]
+      },
+      {
+        "name": "Transporte entre lugares",
+        "description": "No tiene que preocuparse por el transporte entre los diferentes lugares. Ofrezco transporte personal a destinos turísticos en España, para que pueda relajarse y disfrutar de sus vacaciones. Juntos visitaremos lugares hermosos como cascadas, lagos, playas famosas o ciudades portuarias.",
+        "points": [
+          "Transporte personal entre atracciones turísticas",
+          "Flexibilidad y comodidad durante el viaje",
+          "Destinos: playas, cascadas, lagos, ciudades"
+        ]
+      },
+      {
+        "name": "Guía turístico",
+        "description": "Como su guía personal, le mostraré los lugares más bellos que España tiene para ofrecer. Visitaremos playas hermosas, exploraremos encantadores lagos y disfrutaremos de vistas panorámicas del mar. También le llevaré por ciudades históricas y lugares secretos que el turista común no encontrará.",
+        "points": [
+          "Guía por hermosas playas y lagos",
+          "Vistas panorámicas al mar",
+          "Descubrimiento de los tesoros ocultos de España"
+        ]
+      }
+    ]
+  ],
+  "contact": [
+    "Contácteme",
+    "Si tiene alguna pregunta, no dude en ponerse en contacto conmigo.",
+    "Teléfono",
+    "Correo electrónico"
+  ]
+}

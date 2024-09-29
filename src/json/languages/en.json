@@ -1,0 +1,104 @@
+{
+  "titles": {
+    "error": "Error",
+    "introduction": "Introduction",
+    "services": "Services",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "footer": [
+    "All rights reserved."
+  ],
+  "galleryPagination": [
+    "Previous",
+    "Next"
+  ],
+  "weatherRadar": [
+    "Weather",
+    "Temperature",
+    "Feels like temperature",
+    "Humidity",
+    "Wind",
+    {
+      "clear sky": "Clear sky",
+      "few clouds": "Few clouds",
+      "scattered clouds": "Scattered clouds",
+      "broken clouds": "Broken clouds",
+      "shower rain": "Shower rain",
+      "rain": "Rain",
+      "thunderstorm": "Thunderstorm",
+      "snow": "Snow",
+      "mist": "Mist"
+    }
+  ],
+  "introduction": [
+    "Your personal travel services in Spain",
+    "I offer you personal and unique travel experiences in the area of Jávea, located in the beautiful province of Alicante and Valencia.",
+    "Car rental",
+    "Option to rent a car for comfortable travel, whether alone or with family.",
+    "Accommodation",
+    "I will arrange accommodation for you in quality apartments or hotels, or I offer a cheaper option to stay at my home.",
+    "Transport to destinations",
+    "I provide personal transportation to beautiful tourist destinations.",
+    "Tour guide",
+    "I will show you the best Spain has to offer: beautiful beaches, lakes, and local attractions."
+  ],
+  "introductionTourism": [
+    "Tourist attractions I can show you",
+    "As your personal guide, I will take you to some of the most beautiful beaches, sea views, and a beautiful lake in Spain.",
+    "Beautiful beaches",
+    "Enjoy gorgeous sandy beaches where you can swim, relax, or walk along the coast.",
+    "Lake",
+    "Visit a beautiful Spanish lake, offering a peaceful environment and a great opportunity to relax.",
+    "Sea and views",
+    "I offer walks along the coast and unforgettable views of the sea and horizon."
+  ],
+  "services": [
+    "Detailed information about my services",
+    "I have prepared a wide range of services for you so that you can fully enjoy your vacation in Spain. Travel can also be enjoyed during the winter when the weather here is still warm and pleasant. There are many places worth seeing, whether in summer or winter. Enjoy relaxation by the sea, fresh air, and great catering from local restaurants.",
+    [
+      {
+        "name": "Car rental",
+        "description": "Do you need reliable transportation during your stay in Spain? I offer the option of renting a comfortable car for up to 7 people. I can deliver the car to you or pick you up directly from the Alicante or Valencia airports, ensuring maximum comfort and flexibility during your vacation. Avoid the stress of finding transportation and start exploring the beauty of Spain right away.",
+        "points": [
+          "Car for up to 7 people",
+          "Delivery to the airport (Alicante, Valencia) or pickup",
+          "Flexible rental according to your needs"
+        ]
+      },
+      {
+        "name": "Accommodation",
+        "description": "Do you want accommodation that meets your expectations? I will arrange comfortable accommodation for you in apartments or hotels near the most interesting places. Whether you prefer quiet apartments by the sea or a luxury hotel in the city, I will make sure the accommodation matches your requirements.",
+        "points": [
+          "Various types of accommodation: apartments, hotels",
+          "Proximity to beaches and attractive locations",
+          "Tailored accommodation according to your needs"
+        ]
+      },
+      {
+        "name": "Transport to destinations",
+        "description": "You don't have to worry about transportation between places. I offer personal transport to tourist destinations in Spain, so you can relax and enjoy your vacation. Together, we will visit beautiful places such as waterfalls, lakes, famous beaches, or port cities.",
+        "points": [
+          "Personal transport between tourist attractions",
+          "Flexibility and comfort during travels",
+          "Destinations: beaches, waterfalls, lakes, cities"
+        ]
+      },
+      {
+        "name": "Tour guide",
+        "description": "As your personal guide, I will show you the most beautiful places Spain has to offer. We will visit stunning beaches, explore magical lakes, and enjoy sea views. I will also guide you through historic towns and mysterious places that the average tourist doesn't find.",
+        "points": [
+          "Guided tours of beautiful beaches and lakes",
+          "Panoramic sea views",
+          "Discovering hidden gems of Spain"
+        ]
+      }
+    ]
+  ],
+  "contact": [
+    "Contact me",
+    "If you have any questions, feel free to contact me.",
+    "Phone",
+    "Email"
+  ]
+}

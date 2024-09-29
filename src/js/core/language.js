@@ -1,15 +1,20 @@
 import csObj from "../../json/languages/cs.json";
+import enObj from "../../json/languages/en.json";
+import esObj from "../../json/languages/es.json";
 
 export default class Language {
   static get relevant() {
-    // TODO: Kód jazyka má být dynamicky orientovaný
-    //       podle nastavení prohlížeče.
-    let codeLang = "cs";
+    let codeLang = navigator.language.split("-")[0];
 
     switch (codeLang) {
     case "cs":
-    case "cs-CZ":
       return csObj;
+
+    case "en":
+      return enObj;
+
+    case "es":
+      return esObj;
 
     default:
       return csObj
