@@ -13,4 +13,7 @@ import ElmIntroductionTourism from "./elements/introduction/elm_tourism";
 window.customElements.define(
   "elm-introduction-tourism",
   ElmIntroductionTourism
-)
+);
+
+import ElmServices from "./elements/elm_services";
+window.customElements.define("elm-services", ElmServices)

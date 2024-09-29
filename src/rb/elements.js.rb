@@ -16,3 +16,6 @@ window.custom_elements.define('elm-introduction', ElmIntroduction)
 
 import 'ElmIntroductionTourism', './elements/introduction/elm_tourism'
 window.custom_elements.define('elm-introduction-tourism', ElmIntroductionTourism)
+
+import 'ElmServices', './elements/elm_services'
+window.custom_elements.define('elm-services', ElmServices)

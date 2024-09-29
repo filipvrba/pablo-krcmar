@@ -48,5 +48,47 @@
     "Navštivte krásné španělské jezero, které nabízí klidné prostředí a skvělou příležitost pro odpočinek.",
     "Moře a výhledy",
     "Nabízím procházky podél pobřeží a nezapomenutelné výhledy na moře a horizont."
+  ],
+  "services": [
+    "Podrobné informace o mých službách",
+    "Připravil jsem pro vás širokou nabídku služeb, abyste si mohli naplno užít vaši dovolenou ve Španělsku. Cestování lze využít také v zimním období, kdy je zde stále teplé a příjemné počasí. Je mnoho míst, která stojí za to vidět, ať už v létě nebo v zimě. Užijete si relax u moře, čistý vzduch a skvělý catering místních restaurací.",
+    [
+      {
+        "name": "Půjčení auta",
+        "description": "Potřebujete spolehlivou dopravu během vašeho pobytu ve Španělsku? Nabízím možnost půjčení pohodlného auta až pro 7 osob. Auto vám mohu přistavit nebo vás vyzvednout přímo z letiště Alicante nebo Valencie, což zajišťuje maximální pohodlí a flexibilitu během vaší dovolené. Vyhnete se stresu z hledání dopravy a můžete hned začít objevovat krásy Španělska.",
+        "points": [
+          "Auto pro až 7 osob",
+          "Přistavení na letiště (Alicante, Valencie) nebo vyzvednutí",
+          "Flexibilní pronájem podle vašich potřeb"
+        ]
+      },
+      {
+        "name": "Ubytování",
+        "description": "Chcete ubytování, které bude odpovídat vašim představám? Zajistím pro vás pohodlné ubytování v apartmánech nebo hotelích v blízkosti nejzajímavějších míst. Ať už preferujete klidné apartmány u moře nebo luxusní hotel ve městě, zařídím, aby bylo ubytování přesně podle vašich požadavků.",
+        "points": [
+          "Různé typy ubytování: apartmány, hotely",
+          "Blízkost pláží a atraktivních míst",
+          "Ubytování na míru dle vašich požadavků"
+        ]
+      },
+      {
+        "name": "Rozvoz po místech",
+        "description": "Nemusíte se starat o dopravu mezi jednotlivými místy. Nabízím osobní rozvoz po turistických destinacích ve Španělsku, abyste mohli relaxovat a vychutnat si svou dovolenou. Projedeme spolu krásná místa jako vodopády, jezera, vyhlášené pláže nebo přístavní města.",
+        "points": [
+          "Osobní doprava mezi turistickými atrakcemi",
+          "Flexibilita a komfort během cest",
+          "Destinace: pláže, vodopády, jezera, města"
+        ]
+      },
+      {
+        "name": "Průvodce místy",
+        "description": "Jako váš osobní průvodce vám ukážu nejkrásnější místa, která Španělsko nabízí. Navštívíme nádherné pláže, prozkoumáme kouzelné jezera a vychutnáme si výhledy na moře. Také vás provedu historickými městy a tajemnými místy, které běžný turista nenajde.",
+        "points": [
+          "Průvodce po krásných plážích a jezerech",
+          "Panoramatické výhledy na moře",
+          "Objevování skrytých pokladů Španělska"
+        ]
+      }
+    ]
   ]
 }
