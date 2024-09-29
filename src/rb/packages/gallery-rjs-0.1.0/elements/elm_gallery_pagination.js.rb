@@ -9,6 +9,8 @@ export default class ElmGalleryPagination < ElmGallery
     @page_index = get_page_index()
     @name       = self.get_attribute('name')
 
+    @words = Language.relevant.gallery_pagination
+
     window.change_gallery = change_gallery
     window.scroll_gallery = scroll_gallery
   end
@@ -120,11 +122,11 @@ export default class ElmGalleryPagination < ElmGallery
 <nav aria-label='Page navigation example'>
   <ul class='pagination justify-content-center'>
     <li class='page-item'>
-      <button class='page-link' onclick='scrollGallery(true)'>Předchozí</button>
+      <button class='page-link' onclick='scrollGallery(true)'>#{@words[0]}</button>
     </li>
     #{l_btn_numbers()}
     <li class='page-item'>
-      <button class='page-link' onclick='scrollGallery(false)'>Další</button>
+      <button class='page-link' onclick='scrollGallery(false)'>#{@words[1]}</button>
     </li>
   </ul>
 </nav>

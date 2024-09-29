@@ -5,6 +5,7 @@ export default class ElmGalleryPagination extends ElmGallery {
     super();
     this._pageIndex = this.getPageIndex();
     this._name = this.getAttribute("name");
+    this._words = Language.relevant.galleryPagination;
     window.changeGallery = this.changeGallery.bind(this);
     window.scrollGallery = this.scrollGallery.bind(this)
   };
@@ -112,11 +113,11 @@ ${super.subinitElm()}
 <nav aria-label='Page navigation example'>
   <ul class='pagination justify-content-center'>
     <li class='page-item'>
-      <button class='page-link' onclick='scrollGallery(true)'>Předchozí</button>
+      <button class='page-link' onclick='scrollGallery(true)'>${this._words[0]}</button>
     </li>
     ${lBtnNumbers()}
     <li class='page-item'>
-      <button class='page-link' onclick='scrollGallery(false)'>Další</button>
+      <button class='page-link' onclick='scrollGallery(false)'>${this._words[1]}</button>
     </li>
   </ul>
 </nav>

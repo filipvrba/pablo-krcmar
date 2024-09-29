@@ -9,6 +9,10 @@
   "footer": [
     "Všechna práva vyhrazena."
   ],
+  "galleryPagination": [
+    "Předchozí",
+    "Další"
+  ],
   "weatherRadar": [
     "Počasí",
     "Teplota",
