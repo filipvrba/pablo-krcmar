@@ -10,3 +10,9 @@ window.custom_elements.define('elm-footer', ElmFooter)
 
 import 'ElmWeatherRadar', './elements/elm_weather_radar'
 window.custom_elements.define('elm-weather-radar', ElmWeatherRadar)
+
+import 'ElmIntroduction', './elements/elm_introduction'
+window.custom_elements.define('elm-introduction', ElmIntroduction)
+
+import 'ElmIntroductionTourism', './elements/introduction/elm_tourism'
+window.custom_elements.define('elm-introduction-tourism', ElmIntroductionTourism)

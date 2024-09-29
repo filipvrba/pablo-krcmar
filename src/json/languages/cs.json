@@ -26,5 +26,27 @@
       "snow": "Sněžení",
       "mist": "Mlha"
     }
+  ],
+  "introduction": [
+    "Vaše osobní cestovní služby ve Španělsku",
+    "Nabízím vám osobní a jedinečné cestovní zážitky v oblasti města Jávea, které se nachází v krásné provincii Alicante a Valencie.",
+    "Půjčení auta",
+    "Možnost pronájmu auta pro pohodlné cestování, ať už sami nebo s rodinou.",
+    "Ubytování",
+    "Zařídím pro vás ubytování v kvalitních apartmánech nebo hotelech, nebo nabízím levnější možnost ubytování přímo u mě doma.",
+    "Rozvoz po místech",
+    "Zajišťuji osobní dopravu po krásných turistických destinacích.",
+    "Průvodce místy",
+    "Ukážu vám to nejlepší, co Španělsko nabízí: krásné pláže, jezera a místní zajímavosti."
+  ],
+  "introductionTourism": [
+    "Turistické atrakce, které vám mohu ukázat",
+    "Jako váš osobní průvodce vás provedu některými z nejkrásnějších pláží, výhledů na moře a krásným jezerem ve Španělsku.",
+    "Krásné pláže",
+    "Užijte si nádherné písečné pláže, kde se můžete koupat, odpočívat nebo procházet podél pobřeží.",
+    "Jezero",
+    "Navštivte krásné španělské jezero, které nabízí klidné prostředí a skvělou příležitost pro odpočinek.",
+    "Moře a výhledy",
+    "Nabízím procházky podél pobřeží a nezapomenutelné výhledy na moře a horizont."
   ]
 }

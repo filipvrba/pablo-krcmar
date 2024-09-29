@@ -5,4 +5,12 @@ window.customElements.define("elm-header", ElmHeader);
 import ElmFooter from "./elements/elm_footer";
 window.customElements.define("elm-footer", ElmFooter);
 import ElmWeatherRadar from "./elements/elm_weather_radar";
-window.customElements.define("elm-weather-radar", ElmWeatherRadar)
+window.customElements.define("elm-weather-radar", ElmWeatherRadar);
+import ElmIntroduction from "./elements/elm_introduction";
+window.customElements.define("elm-introduction", ElmIntroduction);
+import ElmIntroductionTourism from "./elements/introduction/elm_tourism";
+
+window.customElements.define(
+  "elm-introduction-tourism",
+  ElmIntroductionTourism
+)
