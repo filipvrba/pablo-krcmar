@@ -16,4 +16,6 @@ window.customElements.define(
 );
 
 import ElmServices from "./elements/elm_services";
-window.customElements.define("elm-services", ElmServices)
+window.customElements.define("elm-services", ElmServices);
+import ElmContact from "./elements/elm_contact";
+window.customElements.define("elm-contact", ElmContact)
