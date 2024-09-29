@@ -26,6 +26,7 @@ export default class ElmLazyImage < HTMLElement
   end
 
   def connected_callback()
+
     if @img.complete
       @l_loaded.call()
     else
@@ -39,8 +40,8 @@ export default class ElmLazyImage < HTMLElement
 
   def init_elm()
     template = """
-<div class='d-flex justify-content-center align-items-center'>
-  <div id='#{@id}' class='blurred-img' style='background-image: url(#{ @src_small }); #{@style}'>
+<div class='d-flex justify-content-center align-items-center' style='aspect-ratio: 1 / 1;'>
+  <div id='#{@id}' class='blurred-img' style='background-image: url(#{ @src_small }); width: 100%; height: 100%; #{@style}'>
     <img src='#{@src}' loading='lazy' class='img-fluid #{@class}' style='#{@style}' alt='#{@alt}' />
   </div>
 </div>

@@ -36,8 +36,8 @@ export default class ElmLazyImage extends HTMLElement {
 
   initElm() {
     let template = `${`
-<div class='d-flex justify-content-center align-items-center'>
-  <div id='${this._id}' class='blurred-img' style='background-image: url(${this._srcSmall}); ${this._style}'>
+<div class='d-flex justify-content-center align-items-center' style='aspect-ratio: 1 / 1;'>
+  <div id='${this._id}' class='blurred-img' style='background-image: url(${this._srcSmall}); width: 100%; height: 100%; ${this._style}'>
     <img src='${this._src}' loading='lazy' class='img-fluid ${this._class}' style='${this._style}' alt='${this._alt}' />
   </div>
 </div>
