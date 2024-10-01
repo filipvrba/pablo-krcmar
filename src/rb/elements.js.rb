@@ -22,3 +22,6 @@ window.custom_elements.define('elm-services', ElmServices)
 
 import 'ElmContact', './elements/elm_contact'
 window.custom_elements.define('elm-contact', ElmContact)
+
+import 'ElmCmpBanner', './elements/elm_cmp_banner'
+window.custom_elements.define('elm-cmp-banner', ElmCmpBanner)

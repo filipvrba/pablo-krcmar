@@ -18,4 +18,6 @@ window.customElements.define(
 import ElmServices from "./elements/elm_services";
 window.customElements.define("elm-services", ElmServices);
 import ElmContact from "./elements/elm_contact";
-window.customElements.define("elm-contact", ElmContact)
+window.customElements.define("elm-contact", ElmContact);
+import ElmCmpBanner from "./elements/elm_cmp_banner";
+window.customElements.define("elm-cmp-banner", ElmCmpBanner)
