@@ -5,6 +5,8 @@ export default class ElmCmpBanner < HTMLElement
     @h_accept_cookies_click = lambda { accept_all_cookies() }
     @h_reject_cookies_click = lambda { reject_all_cookies() }
 
+    @words = Language.relevant.cmp_banner
+
     init_elm()
 
     @cmp_banner = self.query_selector('#cmp-banner')
@@ -27,11 +29,21 @@ export default class ElmCmpBanner < HTMLElement
   def show_banner()
     unless local_storage.getItem('userConsent')
       @cmp_banner.class_list.remove('d-none')
+
+      # Animation
+      set_timeout(lambda do
+        @cmp_banner.class_list.add('show')
+      end, 500)
     end
   end
 
   def hide_banner()
-    @cmp_banner.class_list.add('d-none')
+    @cmp_banner.classList.remove('show')
+
+    # Animation
+    set_timeout(lambda do
+      @cmp_banner.class_list.add('d-none')
+    end, 500)
   end
 
   def accept_all_cookies()
@@ -64,15 +76,11 @@ export default class ElmCmpBanner < HTMLElement
     template = """
 <div id='cmp-banner' class='d-none'>
   <div class='container'>
-    <h5>Vaše soukromí je pro nás důležité</h5>
-    <p>
-      Tento web používá cookies k ukládání údajů o vaší návštěvě a klikání na rubriky pro zlepšení našich služeb.
-      Souhlasíte s tímto sledováním? Více informací naleznete v <a href='/privacy-policy' target='_blank' style='color: #17a2b8;'>zásadách ochrany osobních údajů</a>.
-    </p>
+    <h5>#{@words[0]}</h5>
+    <p>#{@words[1]}</p>
     <div class='cmp-options'>
-      <button class='btn btn-success btn-sm' id='accept-cookies'>Přijmout vše</button>
-      <button class='btn btn-danger btn-sm' id='reject-cookies'>Odmítnout vše</button>
-      <button class='btn btn-secondary btn-sm' id='customize-cookies'>Nastavit</button>
+      <button class='btn btn-success btn-sm' id='accept-cookies'>#{@words[2]}</button>
+      <button class='btn btn-danger btn-sm' id='reject-cookies'>#{@words[3]}</button>
     </div>
   </div>
 </div>

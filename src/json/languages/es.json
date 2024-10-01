@@ -100,5 +100,11 @@
     "Si tiene alguna pregunta, no dude en ponerse en contacto conmigo.",
     "Teléfono",
     "Correo electrónico"
+  ],
+  "cmpBanner": [
+    "Su privacidad es importante para nosotros",
+    "Este sitio web utiliza cookies para almacenar datos sobre su visita y clics en secciones para mejorar nuestros servicios. ¿Está de acuerdo con este seguimiento?",
+    "Aceptar todo",
+    "Rechazar todo"
   ]
 }

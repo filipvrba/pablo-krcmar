@@ -100,5 +100,11 @@
     "If you have any questions, feel free to contact me.",
     "Phone",
     "Email"
+  ],
+  "cmpBanner": [
+    "Your privacy is important to us",
+    "This website uses cookies to store data about your visit and clicks on sections to improve our services. Do you agree with this tracking?",
+    "Accept all",
+    "Reject all"
   ]
 }

@@ -10,6 +10,7 @@ export default class ElmCmpBanner extends HTMLElement {
       return this.rejectAllCookies()
     };
 
+    this._words = Language.relevant.cmpBanner;
     this.initElm();
     this._cmpBanner = this.querySelector("#cmp-banner");
     this._acceptCookies = this.querySelector("#accept-cookies");
@@ -44,12 +45,14 @@ export default class ElmCmpBanner extends HTMLElement {
 
   showBanner() {
     if (!localStorage.getItem("userConsent")) {
-      return this._cmpBanner.classList.remove("d-none")
+      this._cmpBanner.classList.remove("d-none");
+      return setTimeout(() => this._cmpBanner.classList.add("show"), 500)
     }
   };
 
   hideBanner() {
-    return this._cmpBanner.classList.add("d-none")
+    this._cmpBanner.classList.remove("show");
+    return setTimeout(() => this._cmpBanner.classList.add("d-none"), 500)
   };
 
   acceptAllCookies() {
@@ -80,15 +83,11 @@ export default class ElmCmpBanner extends HTMLElement {
     let template = `${`
 <div id='cmp-banner' class='d-none'>
   <div class='container'>
-    <h5>Vaše soukromí je pro nás důležité</h5>
-    <p>
-      Tento web používá cookies k ukládání údajů o vaší návštěvě a klikání na rubriky pro zlepšení našich služeb.
-      Souhlasíte s tímto sledováním? Více informací naleznete v <a href='/privacy-policy' target='_blank' style='color: #17a2b8;'>zásadách ochrany osobních údajů</a>.
-    </p>
+    <h5>${this._words[0]}</h5>
+    <p>${this._words[1]}</p>
     <div class='cmp-options'>
-      <button class='btn btn-success btn-sm' id='accept-cookies'>Přijmout vše</button>
-      <button class='btn btn-danger btn-sm' id='reject-cookies'>Odmítnout vše</button>
-      <button class='btn btn-secondary btn-sm' id='customize-cookies'>Nastavit</button>
+      <button class='btn btn-success btn-sm' id='accept-cookies'>${this._words[2]}</button>
+      <button class='btn btn-danger btn-sm' id='reject-cookies'>${this._words[3]}</button>
     </div>
   </div>
 </div>
