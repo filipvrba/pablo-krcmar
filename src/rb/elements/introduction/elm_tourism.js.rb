@@ -23,7 +23,7 @@ export default class ElmIntroductionTourism < HTMLElement
       <!-- Pláž -->
       <div class='col-md-4 mb-3'>
           <div class='card'>
-              <img src='/jpg/plaz_01.jpg' class='card-img-top' alt='Beach'>
+              <img src='/jpg/plaz_01.jpg' class='card-img-top' loading='lazy' alt='Beach'>
               <div class='card-body'>
                   <h5 class='card-title'>#{@words[2]}</h5>
                   <p class='card-text'>#{@words[3]}</p>
@@ -33,7 +33,7 @@ export default class ElmIntroductionTourism < HTMLElement
       <!-- Jezero -->
       <div class='col-md-4 mb-3'>
           <div class='card'>
-              <img src='/jpg/jezero_01.jpg' class='card-img-top' alt='Lake'>
+              <img src='/jpg/jezero_01.jpg' class='card-img-top' loading='lazy' alt='Lake'>
               <div class='card-body'>
                   <h5 class='card-title'>#{@words[4]}</h5>
                   <p class='card-text'>#{@words[5]}</p>
@@ -43,7 +43,7 @@ export default class ElmIntroductionTourism < HTMLElement
       <!-- Moře a výhledy -->
       <div class='col-md-4 mb-3'>
           <div class='card'>
-              <img src='/jpg/vyhled_01.jpg' class='card-img-top' alt='Sea'>
+              <img src='/jpg/vyhled_01.jpg' class='card-img-top' loading='lazy' alt='Sea'>
               <div class='card-body'>
                   <h5 class='card-title'>#{@words[6]}</h5>
                   <p class='card-text'>#{@words[7]}</p>
