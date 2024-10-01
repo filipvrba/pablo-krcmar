@@ -50,6 +50,9 @@ export default class ElmRoutes extends HTMLElement {
 
   initMeta(page) {
     let title = `${Language.relevant.titles[page.endpoint]} | ${this._titleApp}`;
-    return document.title = title
+
+    // Title
+    document.title = title;
+    return gtag("event", "search", {searchTerm: page.endpoint})
   }
 }

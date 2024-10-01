@@ -54,5 +54,10 @@ export default class ElmRoutes < HTMLElement
 
     # Title
     document.title = title
+
+    # Google Analytics
+    gtag("event", "search", {
+      search_term: page.endpoint
+    });
   end
 end
