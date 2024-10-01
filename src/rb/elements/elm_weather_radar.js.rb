@@ -71,6 +71,6 @@ export default class ElmWeatherRadar < HTMLElement
   end
 
   def kelvin_to_celsius(temperature)
-    return (temperature - 273.15).to_fixed(2)
+    return Math.round( (temperature - 273.15).to_fixed(2) )
   end
 end

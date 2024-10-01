@@ -68,6 +68,6 @@ export default class ElmWeatherRadar extends HTMLElement {
   };
 
   kelvinToCelsius(temperature) {
-    return (temperature - 273.15).toFixed(2)
+    return Math.round((temperature - 273.15).toFixed(2))
   }
 }
