@@ -13,7 +13,6 @@ export default class ElmWeatherRadar < HTMLElement
     @weather_icon = self.query_selector('#weatherIcon')
     @description  = self.query_selector('#description')
     @temperature  = self.query_selector('#temperature')
-    @feels_like   = self.query_selector('#feelsLike')
     @humidity     = self.query_selector('#humidity')
     @wind         = self.query_selector('#wind')
     @time         = self.query_selector('#time')
