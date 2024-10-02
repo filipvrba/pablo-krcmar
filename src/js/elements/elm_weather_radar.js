@@ -9,7 +9,6 @@ export default class ElmWeatherRadar extends HTMLElement {
     this._weatherIcon = this.querySelector("#weatherIcon");
     this._description = this.querySelector("#description");
     this._temperature = this.querySelector("#temperature");
-    this._feelsLike = this.querySelector("#feelsLike");
     this._humidity = this.querySelector("#humidity");
     this._wind = this.querySelector("#wind");
     this._time = this.querySelector("#time")
