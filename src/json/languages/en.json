@@ -125,7 +125,8 @@
           "Car for up to 7 people",
           "Delivery to the airport (Alicante, Valencia) or pickup",
           "Flexible rental according to your needs"
-        ]
+        ],
+        "price": "Price: 50 EUR / day"
       },
       {
         "name": "Accommodation",
@@ -134,7 +135,8 @@
           "Various types of accommodation: apartments, hotels",
           "Proximity to beaches and attractive locations",
           "Tailored accommodation according to your needs"
-        ]
+        ],
+        "price": "Price: from 50 EUR / day"
       },
       {
         "name": "Transport to destinations",
@@ -143,7 +145,8 @@
           "Personal transport between tourist attractions",
           "Flexibility and comfort during travels",
           "Destinations: beaches, waterfalls, lakes, cities"
-        ]
+        ],
+        "price": "Price: 30 EUR / hour"
       },
       {
         "name": "Tour guide",
@@ -152,7 +155,8 @@
           "Guided tours of beautiful beaches and lakes",
           "Panoramic sea views",
           "Discovering hidden gems of Spain"
-        ]
+        ],
+        "price": "Price: 40 EUR / hour"
       }
     ]
   ],

@@ -61,6 +61,10 @@ ${this.subinitElm()}
     <ul>
       ${this.listInitElm(element.points)}
     </ul>
+
+    <div class='price-box mt-3 mb-3 p-3 text-center rounded-3'>
+      <h3 class='fw-bold mb-0'>${element.price}</h3>
+    </div>
   </div>
   <div class='col-md-6 ${style[1]}'>
     <elm-lazy-image src='${detailObj.image.src}' class='rounded' alt='${detailObj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>

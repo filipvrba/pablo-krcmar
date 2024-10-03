@@ -125,7 +125,8 @@
           "Auto pro až 7 osob",
           "Přistavení na letiště (Alicante, Valencie) nebo vyzvednutí",
           "Flexibilní pronájem podle vašich potřeb"
-        ]
+        ],
+        "price": "Cena: 50 EUR / den"
       },
       {
         "name": "Ubytování",
@@ -134,7 +135,8 @@
           "Různé typy ubytování: apartmány, hotely",
           "Blízkost pláží a atraktivních míst",
           "Ubytování na míru dle vašich požadavků"
-        ]
+        ],
+        "price": "Cena: od 50 EUR / den"
       },
       {
         "name": "Rozvoz po místech",
@@ -143,7 +145,8 @@
           "Osobní doprava mezi turistickými atrakcemi",
           "Flexibilita a komfort během cest",
           "Destinace: pláže, vodopády, jezera, města"
-        ]
+        ],
+        "price": "Cena: 30 EUR / hodina"
       },
       {
         "name": "Průvodce místy",
@@ -152,7 +155,8 @@
           "Průvodce po krásných plážích a jezerech",
           "Panoramatické výhledy na moře",
           "Objevování skrytých pokladů Španělska"
-        ]
+        ],
+        "price": "Cena: 40 EUR / hodina"
       }
     ]
   ],

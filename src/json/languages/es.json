@@ -125,7 +125,8 @@
           "Coche para hasta 7 personas",
           "Entrega en el aeropuerto (Alicante, Valencia) o recogida",
           "Alquiler flexible según sus necesidades"
-        ]
+        ],
+        "price": "Precio: 50 EUR / día"
       },
       {
         "name": "Alojamiento",
@@ -134,7 +135,8 @@
           "Varios tipos de alojamiento: apartamentos, hoteles",
           "Cercanía a playas y lugares atractivos",
           "Alojamiento personalizado según sus preferencias"
-        ]
+        ],
+        "price": "Precio: desde 50 EUR / día"
       },
       {
         "name": "Transporte entre lugares",
@@ -143,7 +145,8 @@
           "Transporte personal entre atracciones turísticas",
           "Flexibilidad y comodidad durante el viaje",
           "Destinos: playas, cascadas, lagos, ciudades"
-        ]
+        ],
+        "price": "Precio: 30 EUR / hora"
       },
       {
         "name": "Guía turístico",
@@ -152,7 +155,8 @@
           "Guía por hermosas playas y lagos",
           "Vistas panorámicas al mar",
           "Descubrimiento de los tesoros ocultos de España"
-        ]
+        ],
+        "price": "Precio: 40 EUR / hora"
       }
     ]
   ],
