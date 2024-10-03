@@ -10,11 +10,11 @@ export default class ElmCmpBanner extends HTMLElement {
       return this.rejectAllCookies()
     };
 
-    this._words = Language.relevant.cmpBanner;
-    this.initElm();
-    this._cmpBanner = this.querySelector("#cmp-banner");
-    this._acceptCookies = this.querySelector("#accept-cookies");
-    this._rejectCookies = this.querySelector("#reject-cookies")
+    this._hLanguageChange = () => {
+      return this.initElm()
+    };
+
+    this.initElm()
   };
 
   connectedCallback() {
@@ -28,6 +28,12 @@ export default class ElmCmpBanner extends HTMLElement {
       this._hRejectCookiesClick
     );
 
+    Events.connect(
+      "#app",
+      Language.ENVS.languageChange,
+      this._hLanguageChange
+    );
+
     return this.showBanner()
   };
 
@@ -37,10 +43,21 @@ export default class ElmCmpBanner extends HTMLElement {
       this._hAcceptCookiesClick
     );
 
-    return this._rejectCookies.removeEventListener(
+    this._rejectCookies.removeEventListener(
       "click",
       this._hRejectCookiesClick
+    );
+
+    return Events.disconnect(
+      "#app",
+      Language.ENVS.languageChange,
+      this._hLanguageChange
     )
+  };
+
+  languageChange() {
+    this._words = Language.relevant.cmpBanner;
+    return this._words
   };
 
   showBanner() {
@@ -80,6 +97,7 @@ export default class ElmCmpBanner extends HTMLElement {
   };
 
   initElm() {
+    this.languageChange();
     let template = `${`
 <div id='cmp-banner' class='d-none'>
   <div class='container'>
@@ -92,6 +110,10 @@ export default class ElmCmpBanner extends HTMLElement {
   </div>
 </div>
     `}`;
-    return this.innerHTML = template
+    this.innerHTML = template;
+    this._cmpBanner = this.querySelector("#cmp-banner");
+    this._acceptCookies = this.querySelector("#accept-cookies");
+    this._rejectCookies = this.querySelector("#reject-cookies");
+    return this._rejectCookies
   }
 }

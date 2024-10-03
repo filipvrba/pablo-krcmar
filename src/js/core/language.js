@@ -4,7 +4,7 @@ import esObj from "../../json/languages/es.json";
 
 export default class Language {
   static get relevant() {
-    let codeLang = navigator.language.split("-")[0];
+    let codeLang = Language.get || navigator.language.split("-")[0];
 
     switch (codeLang) {
     case "cs":
@@ -19,7 +19,18 @@ export default class Language {
     default:
       return csObj
     }
+  };
+
+  static get get() {
+    return localStorage.getItem("lang") || URLParams.get("lang")
+  };
+
+  static set(codeLang) {
+    URLParams.set("lang", codeLang);
+    localStorage.setItem("lang", codeLang);
+    return Events.emit("#app", Language.ENVS.languageChange)
   }
 };
 
+Language.ENVS = {languageChange: "lang0"};
 window.Language = Language

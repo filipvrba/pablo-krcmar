@@ -24,8 +24,8 @@ export default class ElmContact < HTMLElement
 
 <div class='row mt-5 justify-content-center'>
   <!-- Telefonní karta -->
-  <div class='col-md-4'>
-    <div class='card contact-card mb-4'>
+  <div class='col-md-4 mb-4'>
+    <div class='card h-100 contact-card'>
       <div class='card-body text-center'>
         <i class='bi bi-telephone-fill' style='font-size: 2rem;'></i>
         <h5 class='card-title'>#{@words[2]}</h5>
@@ -37,8 +37,8 @@ export default class ElmContact < HTMLElement
   </div>
 
   <!-- E-mailová karta -->
-  <div class='col-md-4'>
-    <div class='card contact-card mb-4'>
+  <div class='col-md-4 mb-4'>
+    <div class='card h-100 contact-card'>
       <div class='card-body text-center'>
         <i class='bi bi-envelope-fill' style='font-size: 2rem;'></i>
         <h5 class='card-title'>#{@words[3]}</h5>

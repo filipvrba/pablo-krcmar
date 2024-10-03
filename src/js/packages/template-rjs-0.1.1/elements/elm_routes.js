@@ -6,19 +6,41 @@ export default class ElmRoutes extends HTMLElement {
       return this.changePage()
     };
 
+    this._hLanguageChange = () => {
+      return this.changePage()
+    };
+
     this._titleApp = document.title;
     this.changePage()
   };
 
   connectedCallback() {
-    return window.addEventListener("hashchange", this._lHashchange)
+    window.addEventListener("hashchange", this._lHashchange);
+
+    return Events.connect(
+      "#app",
+      Language.ENVS.languageChange,
+      this._hLanguageChange
+    )
   };
 
   disconnectedCallback() {
-    return window.removeEventListener("hashchange", this._lHashchange)
+    window.removeEventListener("hashchange", this._lHashchange);
+
+    return Events.disconnect(
+      "#app",
+      Language.ENVS.languageChange,
+      this._hLanguageChange
+    )
+  };
+
+  languageChange() {
+    this._words = Language.relevant.titles;
+    return this._words
   };
 
   changePage() {
+    this.languageChange();
     let currentPage = this.findCurrentPage();
     if (currentPage) return this.initPage(currentPage)
   };
@@ -42,14 +64,14 @@ export default class ElmRoutes extends HTMLElement {
   initElm(content, page=null) {
     let template = `${`\n    ${page ? content.replace(
       "TITLE",
-      Language.relevant.titles[page.endpoint]
+      this._words[page.endpoint]
     ) : null}\n    `}`;
 
     return this.innerHTML = template
   };
 
   initMeta(page) {
-    let title = `${Language.relevant.titles[page.endpoint]} | ${this._titleApp}`;
+    let title = `${this._words[page.endpoint]} | ${this._titleApp}`;
 
     // Title
     document.title = title;

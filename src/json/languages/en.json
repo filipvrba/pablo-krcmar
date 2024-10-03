@@ -167,5 +167,9 @@
     "This website uses cookies to store data about your visit and clicks on sections to improve our services. Do you agree with this tracking?",
     "Accept all",
     "Reject all"
+  ],
+  "languages": [
+    "The website is currently in English.",
+    "You can select another language from the menu below:"
   ]
 }

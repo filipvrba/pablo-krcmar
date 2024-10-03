@@ -1,22 +1,18 @@
 export default class ElmCmpBanner < HTMLElement
   def initialize
     super
-    
+
     @h_accept_cookies_click = lambda { accept_all_cookies() }
     @h_reject_cookies_click = lambda { reject_all_cookies() }
-
-    @words = Language.relevant.cmp_banner
+    @h_language_change      = lambda { init_elm() }
 
     init_elm()
-
-    @cmp_banner = self.query_selector('#cmp-banner')
-    @accept_cookies = self.query_selector('#accept-cookies')
-    @reject_cookies = self.query_selector('#reject-cookies')
   end
 
   def connected_callback()
     @accept_cookies.add_event_listener('click', @h_accept_cookies_click)
     @reject_cookies.add_event_listener('click', @h_reject_cookies_click)
+    Events.connect('#app', Language::ENVS.language_change, @h_language_change)
 
     show_banner()
   end
@@ -24,6 +20,11 @@ export default class ElmCmpBanner < HTMLElement
   def disconnected_callback()
     @accept_cookies.remove_event_listener('click', @h_accept_cookies_click)
     @reject_cookies.remove_event_listener('click', @h_reject_cookies_click)
+    Events.disconnect('#app', Language::ENVS.language_change, @h_language_change)
+  end
+
+  def language_change()
+    @words = Language.relevant.cmp_banner
   end
 
   def show_banner()
@@ -73,6 +74,8 @@ export default class ElmCmpBanner < HTMLElement
   end
 
   def init_elm()
+    language_change()
+
     template = """
 <div id='cmp-banner' class='d-none'>
   <div class='container'>
@@ -87,5 +90,9 @@ export default class ElmCmpBanner < HTMLElement
     """
 
     self.innerHTML = template
+
+    @cmp_banner     = self.query_selector('#cmp-banner')
+    @accept_cookies = self.query_selector('#accept-cookies')
+    @reject_cookies = self.query_selector('#reject-cookies')
   end
 end
