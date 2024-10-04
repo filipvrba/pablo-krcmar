@@ -126,7 +126,7 @@
           "Delivery to the airport (Alicante, Valencia) or pickup",
           "Flexible rental according to your needs"
         ],
-        "price": "Price: 50 EUR / day"
+        "price": "Price: 20 EUR / day"
       },
       {
         "name": "Accommodation",
@@ -146,7 +146,7 @@
           "Flexibility and comfort during travels",
           "Destinations: beaches, waterfalls, lakes, cities"
         ],
-        "price": "Price: 30 EUR / hour"
+        "price": "Price: from 15 EUR / hour<br>(individual pricing)"
       },
       {
         "name": "Tour guide",
@@ -156,7 +156,7 @@
           "Panoramic sea views",
           "Discovering hidden gems of Spain"
         ],
-        "price": "Price: 40 EUR / hour"
+        "price": "Price: from 15 EUR / hour<br>(individual pricing)"
       }
     ]
   ],

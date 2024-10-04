@@ -126,7 +126,7 @@
           "Přistavení na letiště (Alicante, Valencie) nebo vyzvednutí",
           "Flexibilní pronájem podle vašich potřeb"
         ],
-        "price": "Cena: 50 EUR / den"
+        "price": "Cena: 20 EUR / den"
       },
       {
         "name": "Ubytování",
@@ -146,7 +146,7 @@
           "Flexibilita a komfort během cest",
           "Destinace: pláže, vodopády, jezera, města"
         ],
-        "price": "Cena: 30 EUR / hodina"
+        "price": "Cena: od 15 EUR / hodina<br>(individuální nacenění)"
       },
       {
         "name": "Průvodce místy",
@@ -156,7 +156,7 @@
           "Panoramatické výhledy na moře",
           "Objevování skrytých pokladů Španělska"
         ],
-        "price": "Cena: 40 EUR / hodina"
+        "price": "Cena: od 15 EUR / hodina<br>(individuální nacenění)"
       }
     ]
   ],

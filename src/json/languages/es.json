@@ -126,7 +126,7 @@
           "Entrega en el aeropuerto (Alicante, Valencia) o recogida",
           "Alquiler flexible según sus necesidades"
         ],
-        "price": "Precio: 50 EUR / día"
+        "price": "Precio: 20 EUR / día"
       },
       {
         "name": "Alojamiento",
@@ -146,7 +146,7 @@
           "Flexibilidad y comodidad durante el viaje",
           "Destinos: playas, cascadas, lagos, ciudades"
         ],
-        "price": "Precio: 30 EUR / hora"
+        "price": "Precio: desde 15 EUR / hora<br>(precio individual)"
       },
       {
         "name": "Guía turístico",
@@ -156,7 +156,7 @@
           "Vistas panorámicas al mar",
           "Descubrimiento de los tesoros ocultos de España"
         ],
-        "price": "Precio: 40 EUR / hora"
+        "price": "Precio: desde 15 EUR / hora<br>(precio individual)"
       }
     ]
   ],
