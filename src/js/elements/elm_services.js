@@ -4,24 +4,24 @@ export default class ElmServices extends HTMLElement {
     this._words = Language.relevant.services;
 
     this._detailElements = [
-      {
-        icon: "bi-car-front-fill",
-        image: {src: "/jpg/car_01.jpg", alt: "Car rental"}
-      },
+      {icon: "bi-car-front-fill", image: {
+        src: ["/jpg/car_01.jpg", "/jpg/car_02.jpg"],
+        alt: "Car rental"
+      }},
 
       {
         icon: "bi-house-door-fill",
-        image: {src: "/jpg/accommodation_01.jpg", alt: "Accommodations"}
+        image: {src: ["/jpg/accommodation_01.jpg"], alt: "Accommodations"}
       },
 
       {
         icon: "bi-bus-front-fill",
-        image: {src: "/jpg/delivery_01.jpg", alt: "Delivery to locations"}
+        image: {src: ["/jpg/delivery_01.jpg"], alt: "Delivery to locations"}
       },
 
       {
         icon: "bi-map-fill",
-        image: {src: "/jpg/vyhled_01.jpg", alt: "Places Guide"}
+        image: {src: ["/jpg/vyhled_01.jpg"], alt: "Places Guide"}
       }
     ];
 
@@ -46,6 +46,42 @@ ${this.subinitElm()}
     return this.innerHTML = template
   };
 
+  imgsInitElm(detailObj) {
+    let lLazyImage = src => (
+      `<elm-lazy-image src='${src}' class='rounded' alt='${detailObj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>`
+    );
+
+    if (detailObj.image.src.length <= 1) return lLazyImage(detailObj.image.src[0]);
+    let elements = [];
+
+    detailObj.image.src.forEach((src, i) => {
+      let activeStyle = i === 0 ? "active" : "";
+      let template = `${`
+      <div class='carousel-item ${activeStyle}' data-bs-interval='10000'>
+        <elm-lazy-image src='${src}' class='rounded' alt='${detailObj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>
+      </div>
+      `}`;
+      return elements.push(template)
+    });
+
+    let templateCarousel = `${`
+    <div id='carouselExampleAutoplaying' class='carousel slide' data-bs-ride='carousel'>
+      <div class='carousel-inner'>
+        ${elements.join("")}
+      </div>
+      <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev'>
+        <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+        <span class='visually-hidden'>Previous</span>
+      </button>
+      <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next'>
+        <span class='carousel-control-next-icon' aria-hidden='true'></span>
+        <span class='visually-hidden'>Next</span>
+      </button>
+    </div>
+    `}`;
+    return templateCarousel
+  };
+
   subinitElm() {
     let elements = [];
 
@@ -67,7 +103,7 @@ ${this.subinitElm()}
     </div>
   </div>
   <div class='col-md-6 ${style[1]}'>
-    <elm-lazy-image src='${detailObj.image.src}' class='rounded' alt='${detailObj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>
+    ${this.imgsInitElm(detailObj)}
   </div>
 </div>
       `}`;

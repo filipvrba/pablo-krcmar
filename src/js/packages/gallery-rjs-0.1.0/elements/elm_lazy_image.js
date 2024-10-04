@@ -1,4 +1,5 @@
 // https://blog.webdevsimplified.com/2023-05/lazy-load-images/
+// ffmpeg -i imageName.jpg -vf scale=20:-1 imageName-small.jpg
 export default class ElmLazyImage extends HTMLElement {
   constructor() {
     super();

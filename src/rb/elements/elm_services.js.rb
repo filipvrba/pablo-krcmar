@@ -7,28 +7,28 @@ export default class ElmServices < HTMLElement
       {
         icon: 'bi-car-front-fill',
         image: {
-          src: '/jpg/car_01.jpg',
+          src: ['/jpg/car_01.jpg', '/jpg/car_02.jpg'],
           alt: 'Car rental'
         }
       },
       {
         icon: 'bi-house-door-fill',
         image: {
-          src: '/jpg/accommodation_01.jpg',
+          src: ['/jpg/accommodation_01.jpg'],
           alt: 'Accommodations'
         }
       },
       {
         icon: 'bi-bus-front-fill',
         image: {
-          src: '/jpg/delivery_01.jpg',
+          src: ['/jpg/delivery_01.jpg'],
           alt: 'Delivery to locations'
         }
       },
       {
         icon: 'bi-map-fill',
         image: {
-          src: '/jpg/vyhled_01.jpg',
+          src: ['/jpg/vyhled_01.jpg'],
           alt: 'Places Guide'
         }
       }
@@ -54,6 +54,46 @@ export default class ElmServices < HTMLElement
     self.innerHTML = template
   end
 
+  def imgs_init_elm(detail_obj)
+    l_lazy_image = lambda do |src|
+      return "<elm-lazy-image src='#{src}' class='rounded' alt='#{detail_obj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>"
+    end
+
+    unless detail_obj.image.src.length > 1
+      return l_lazy_image(detail_obj.image.src[0])
+    end
+
+    elements = []
+
+    detail_obj.image.src.each_with_index do |src, i|
+      active_style = i == 0 ? 'active' : ''
+      template = """
+      <div class='carousel-item #{active_style}' data-bs-interval='10000'>
+        <elm-lazy-image src='#{src}' class='rounded' alt='#{detail_obj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>
+      </div>
+      """
+      elements.push(template)
+    end
+
+    template_carousel = """
+    <div id='carouselExampleAutoplaying' class='carousel slide' data-bs-ride='carousel'>
+      <div class='carousel-inner'>
+        #{elements.join('')}
+      </div>
+      <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev'>
+        <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+        <span class='visually-hidden'>Previous</span>
+      </button>
+      <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next'>
+        <span class='carousel-control-next-icon' aria-hidden='true'></span>
+        <span class='visually-hidden'>Next</span>
+      </button>
+    </div>
+    """
+
+    return template_carousel
+  end
+
   def subinit_elm()
     elements = []
 
@@ -76,7 +116,7 @@ export default class ElmServices < HTMLElement
     </div>
   </div>
   <div class='col-md-6 #{style[1]}'>
-    <elm-lazy-image src='#{detail_obj.image.src}' class='rounded' alt='#{detail_obj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>
+    #{imgs_init_elm(detail_obj)}
   </div>
 </div>
       """
