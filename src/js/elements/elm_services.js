@@ -5,7 +5,7 @@ export default class ElmServices extends HTMLElement {
 
     this._detailElements = [
       {icon: "bi-car-front-fill", image: {
-        src: ["/jpg/car_01.jpg", "/jpg/car_02.jpg"],
+        src: ["/jpg/car_02.jpg", "/jpg/car_01.jpg"],
         alt: "Car rental"
       }},
 
