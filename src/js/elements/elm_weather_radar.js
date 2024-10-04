@@ -87,7 +87,7 @@ export default class ElmWeatherRadar extends HTMLElement {
       hour12: true
     };
 
-    let date = new Date((unixTimestamp + timezoneOffset) * 1_000);
+    let date = new Date((unixTimestamp) * 1_000);
     return date.toLocaleString("en-US", options)
   }
 }

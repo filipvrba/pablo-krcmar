@@ -89,7 +89,7 @@ export default class ElmWeatherRadar < HTMLElement
       hour12: true,
     }
 
-    date = Date.new (unixTimestamp + timezoneOffset) * 1000
+    date = Date.new (unixTimestamp) * 1000
     return date.to_locale_string('en-US', options)
   end
 end
