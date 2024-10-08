@@ -28,3 +28,6 @@ window.custom_elements.define('elm-cmp-banner', ElmCmpBanner)
 
 import 'ElmLanguages', './elements/elm_languages'
 window.custom_elements.define('elm-languages', ElmLanguages)
+
+import 'ElmBtnInstagram', './elements/elm_btn_instagram'
+window.custom_elements.define('elm-btn-instagram', ElmBtnInstagram)

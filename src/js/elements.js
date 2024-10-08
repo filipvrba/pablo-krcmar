@@ -22,4 +22,6 @@ window.customElements.define("elm-contact", ElmContact);
 import ElmCmpBanner from "./elements/elm_cmp_banner";
 window.customElements.define("elm-cmp-banner", ElmCmpBanner);
 import ElmLanguages from "./elements/elm_languages";
-window.customElements.define("elm-languages", ElmLanguages)
+window.customElements.define("elm-languages", ElmLanguages);
+import ElmBtnInstagram from "./elements/elm_btn_instagram";
+window.customElements.define("elm-btn-instagram", ElmBtnInstagram)

@@ -175,5 +175,8 @@
   "languages": [
     "The website is currently in English.",
     "You can select another language from the menu below:"
+  ],
+  "btnInstagram": [
+    "More photos on Instagram"
   ]
 }
