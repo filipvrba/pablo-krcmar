@@ -14,9 +14,18 @@ export default class ElmIntroduction extends HTMLElement {
   };
 
   initElm() {
+    // <h1 class='text-center mt-5'>#{@words[0]}</h1>
+    // <p class='text-center'>#{@words[1]}</p>
     let template = `${`
-<h1 class='text-center mt-5'>${this._words[0]}</h1>
-<p class='text-center'>${this._words[1]}</p>
+<div class='row'>
+  <div class='col-md-6 mb-4 ps-lg-5'>
+    <h1>${this._words[0]}</h1>
+    <p class='lead'>${this._words[1]}</p>
+  </div>
+  <div class='col-md-6 text-center d-flex justify-content-center my-auto'>
+    <elm-lazy-image src='/jpg/avatar_01.jpg' class='max-400' classt='max-400' style='border-radius: 50%;' alt='Pablo Krcmar'></elm-lazy-image>
+  </div>
+</div>
 
 <div class='row text-center mt-5'>
   <!-- Půjčení auta -->
