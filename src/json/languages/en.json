@@ -94,11 +94,11 @@
   ],
   "introduction": [
     "Your personal travel services in Spain",
-    "I offer you personal and unique travel experiences in the area of Jávea, located in the beautiful province of Alicante and Valencia.",
+    "I offer you personal and unique travel experiences in the area of the town of Jávea, located near the beautiful provinces of Alicante and Valencia.",
     "Car rental",
     "Option to rent a car for comfortable travel, whether alone or with family.",
     "Accommodation",
-    "I will arrange accommodation for you in quality apartments or hotels, or I offer a cheaper option to stay at my home.",
+    "I will arrange accommodation for you in quality apartments or hotels, and I can also offer a more affordable option.",
     "Transport to destinations",
     "I provide personal transportation to beautiful tourist destinations.",
     "Tour guide",
@@ -146,7 +146,7 @@
           "Flexibility and comfort during travels",
           "Destinations: beaches, waterfalls, lakes, cities"
         ],
-        "price": "Price: from 15 EUR / hour<br>(individual pricing)"
+        "price": "Price: individual pricing"
       },
       {
         "name": "Tour guide",
@@ -156,7 +156,7 @@
           "Panoramic sea views",
           "Discovering hidden gems of Spain"
         ],
-        "price": "Price: from 15 EUR / hour<br>(individual pricing)"
+        "price": "Price: individual pricing"
       }
     ]
   ],

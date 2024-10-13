@@ -94,11 +94,11 @@
   ],
   "introduction": [
     "Sus servicios de viaje personalizados en España",
-    "Le ofrezco experiencias de viaje personales y únicas en la ciudad de Jávea, ubicada en la hermosa provincia de Alicante y Valencia.",
+    "Les ofrezco experiencias de viaje personales y únicas en la zona de la ciudad de Jávea, situada cerca de las hermosas provincias de Alicante y Valencia.",
     "Alquiler de coche",
     "Posibilidad de alquilar un coche para viajar cómodamente, ya sea solo o en familia.",
     "Alojamiento",
-    "Le consigo alojamiento en apartamentos o hoteles de calidad, o le ofrezco una opción más económica hospedándose en mi casa.",
+    "Les organizaré alojamiento en apartamentos o hoteles de calidad, y también puedo ofrecer una opción más asequible.",
     "Transporte entre lugares",
     "Proporciono transporte personal a través de hermosos destinos turísticos.",
     "Guía turístico",
@@ -146,7 +146,7 @@
           "Flexibilidad y comodidad durante el viaje",
           "Destinos: playas, cascadas, lagos, ciudades"
         ],
-        "price": "Precio: desde 15 EUR / hora<br>(precio individual)"
+        "price": "Precio: precio individual"
       },
       {
         "name": "Guía turístico",
@@ -156,7 +156,7 @@
           "Vistas panorámicas al mar",
           "Descubrimiento de los tesoros ocultos de España"
         ],
-        "price": "Precio: desde 15 EUR / hora<br>(precio individual)"
+        "price": "Precio: precio individual"
       }
     ]
   ],

@@ -94,11 +94,11 @@
   ],
   "introduction": [
     "Vaše osobní cestovní služby ve Španělsku",
-    "Nabízím vám osobní a jedinečné cestovní zážitky v oblasti města Jávea, které se nachází v krásné provincii Alicante a Valencie.",
+    "Nabízím vám osobní a jedinečné cestovní zážitky v oblasti města Jávea, které se nachází v blízkosti krásných provincií Alicante a Valencie.",
     "Půjčení auta",
     "Možnost pronájmu auta pro pohodlné cestování, ať už sami nebo s rodinou.",
     "Ubytování",
-    "Zařídím pro vás ubytování v kvalitních apartmánech nebo hotelech, nebo nabízím levnější možnost ubytování přímo u mě doma.",
+    "Zařídím pro vás ubytování v kvalitních apartmánech či hotelech, případně mohu nabídnout cenově dostupnější variantu.",
     "Rozvoz po místech",
     "Zajišťuji osobní dopravu po krásných turistických destinacích.",
     "Průvodce místy",
@@ -146,7 +146,7 @@
           "Flexibilita a komfort během cest",
           "Destinace: pláže, vodopády, jezera, města"
         ],
-        "price": "Cena: od 15 EUR / hodina<br>(individuální nacenění)"
+        "price": "Cena: individuální nacenění"
       },
       {
         "name": "Průvodce místy",
@@ -156,7 +156,7 @@
           "Panoramatické výhledy na moře",
           "Objevování skrytých pokladů Španělska"
         ],
-        "price": "Cena: od 15 EUR / hodina<br>(individuální nacenění)"
+        "price": "Cena: individuální nacenění"
       }
     ]
   ],

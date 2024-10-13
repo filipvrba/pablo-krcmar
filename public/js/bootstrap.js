@@ -1328,6 +1328,7 @@
     }
     _updateInterval() {
       const element = this._activeElement || this._getActive();
+
       if (!element) {
         return;
       }
