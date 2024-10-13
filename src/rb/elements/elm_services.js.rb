@@ -1,6 +1,10 @@
 export default class ElmServices < HTMLElement
+  COROUSEL_INTERVAL = 10.0
+
   def initialize
     super
+
+    @h_tick = lambda {|e| corousel_update(e.detail.value) }
 
     @words = Language.relevant.services
     @detail_elements = [
@@ -35,12 +39,30 @@ export default class ElmServices < HTMLElement
     ]
     
     init_elm()
+
+    @corousels = self.query_selector_all('.carousel')
+    @corousel_time = 0
   end
 
   def connected_callback()
+    Events.connect('#app', 'tick', @h_tick)
   end
 
   def disconnected_callback()
+    Events.disconnect('#app', 'tick', @h_tick)
+  end
+
+  def corousel_update(dt)
+    @corousel_time += dt
+
+    if @corousel_time >= COROUSEL_INTERVAL
+      @corousel_time = 0
+      @corousels.each do |corousel|
+        btn_next = corousel.query_selector('.carousel-control-next')
+  
+        btn_next.click()
+      end
+    end
   end
 
   def init_elm()
@@ -68,7 +90,7 @@ export default class ElmServices < HTMLElement
     detail_obj.image.src.each_with_index do |src, i|
       active_style = i == 0 ? 'active' : ''
       template = """
-      <div class='carousel-item #{active_style}' data-bs-interval='10000'>
+      <div class='carousel-item #{active_style}'>
         <elm-lazy-image src='#{src}' class='rounded' alt='#{detail_obj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>
       </div>
       """
@@ -76,15 +98,15 @@ export default class ElmServices < HTMLElement
     end
 
     template_carousel = """
-    <div id='carouselExampleAutoplaying' class='carousel slide' data-bs-ride='carousel'>
+    <div id='carouselTemplate' class='carousel slide'>
       <div class='carousel-inner'>
         #{elements.join('')}
       </div>
-      <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev'>
+      <button class='carousel-control-prev' type='button' data-bs-target='#carouselTemplate' data-bs-slide='prev'>
         <span class='carousel-control-prev-icon' aria-hidden='true'></span>
         <span class='visually-hidden'>Previous</span>
       </button>
-      <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next'>
+      <button class='carousel-control-next' type='button' data-bs-target='#carouselTemplate' data-bs-slide='next'>
         <span class='carousel-control-next-icon' aria-hidden='true'></span>
         <span class='visually-hidden'>Next</span>
       </button>

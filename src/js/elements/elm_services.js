@@ -1,6 +1,7 @@
 export default class ElmServices extends HTMLElement {
   constructor() {
     super();
+    this._hTick = e => this.corouselUpdate(e.detail.value);
     this._words = Language.relevant.services;
 
     this._detailElements = [
@@ -25,15 +26,30 @@ export default class ElmServices extends HTMLElement {
       }
     ];
 
-    this.initElm()
+    this.initElm();
+    this._corousels = this.querySelectorAll(".carousel");
+    this._corouselTime = 0
   };
 
   connectedCallback() {
-    return null
+    return Events.connect("#app", "tick", this._hTick)
   };
 
   disconnectedCallback() {
-    return null
+    return Events.disconnect("#app", "tick", this._hTick)
+  };
+
+  corouselUpdate(dt) {
+    this._corouselTime += dt;
+
+    if (this._corouselTime >= ElmServices.COROUSEL_INTERVAL) {
+      this._corouselTime = 0;
+
+      for (let corousel of this._corousels) {
+        let btnNext = corousel.querySelector(".carousel-control-next");
+        btnNext.click()
+      }
+    }
   };
 
   initElm() {
@@ -57,7 +73,7 @@ ${this.subinitElm()}
     detailObj.image.src.forEach((src, i) => {
       let activeStyle = i === 0 ? "active" : "";
       let template = `${`
-      <div class='carousel-item ${activeStyle}' data-bs-interval='10000'>
+      <div class='carousel-item ${activeStyle}'>
         <elm-lazy-image src='${src}' class='rounded' alt='${detailObj.image.alt}' style='border-radius:  0.375rem;'></elm-lazy-image>
       </div>
       `}`;
@@ -65,15 +81,15 @@ ${this.subinitElm()}
     });
 
     let templateCarousel = `${`
-    <div id='carouselExampleAutoplaying' class='carousel slide' data-bs-ride='carousel'>
+    <div id='carouselTemplate' class='carousel slide'>
       <div class='carousel-inner'>
         ${elements.join("")}
       </div>
-      <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev'>
+      <button class='carousel-control-prev' type='button' data-bs-target='#carouselTemplate' data-bs-slide='prev'>
         <span class='carousel-control-prev-icon' aria-hidden='true'></span>
         <span class='visually-hidden'>Previous</span>
       </button>
-      <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next'>
+      <button class='carousel-control-next' type='button' data-bs-target='#carouselTemplate' data-bs-slide='next'>
         <span class='carousel-control-next-icon' aria-hidden='true'></span>
         <span class='visually-hidden'>Next</span>
       </button>
@@ -123,4 +139,6 @@ ${this.subinitElm()}
 
     return elements.join("")
   }
-}
+};
+
+ElmServices.COROUSEL_INTERVAL = 10.0

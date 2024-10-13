@@ -3,4 +3,5 @@ import "./core/net";
 import "./core/routes";
 import "./core/language";
 import "./core/gallery";
-import "./core/url_params"
+import "./core/url_params";
+import "./core/clock"
