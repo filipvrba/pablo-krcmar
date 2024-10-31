@@ -5,8 +5,6 @@ export default class ElmRoutes < HTMLElement
     @l_hashchange      = lambda { change_page() }
     @h_language_change = lambda { change_page() }
 
-    @title_app = document.title
-
     change_page()
   end
 
@@ -21,7 +19,8 @@ export default class ElmRoutes < HTMLElement
   end
 
   def language_change()
-    @words = Language.relevant.titles
+    @titles = Language.relevant.titles
+    @meta   = Language.relevant.meta
   end
 
   def change_page()
@@ -53,17 +52,27 @@ export default class ElmRoutes < HTMLElement
 
   def init_elm(content, page = nil)
     template = """
-    #{content.sub('TITLE', @words[page.endpoint]) if page}
+    #{content.sub('TITLE', @titles[page.endpoint]) if page}
     """
 
     self.innerHTML = template
   end
 
   def init_meta(page)
-    title = "#{@words[page.endpoint]} | #{@title_app}"
+    title = "#{@titles[page.endpoint]} | #{@meta[0]}"
 
     # Title
     document.title = title
+    document.query_selector('meta[property="og:title"]').set_attribute('content', @meta[0])
+    document.query_selector('meta[name="twitter:title"]').set_attribute('content', @meta[0])
+
+    # Description
+    document.query_selector('meta[name="description"]').set_attribute('content', @meta[1])
+    document.query_selector('meta[property="og:description"]').set_attribute('content', @meta[1])
+    document.query_selector('meta[name="twitter:description"]').set_attribute('content', @meta[1])
+
+    # Keywords
+    document.query_selector('meta[name="keywords"]').set_attribute('content', @meta[2])
 
     # Google Analytics
     gtag("event", "search", {

@@ -39,7 +39,7 @@ export default class ElmWeatherRadar extends HTMLElement {
     </div>
     <div>
       <div class='d-flex mb-3 justify-content-center'>
-        <img id='weatherIcon' src='https://openweathermap.org/img/wn/01d@2x.png' width='50px' height='50px'>
+        <img id='weatherIcon' src='https://openweathermap.org/img/wn/01d@2x.png' alt='Weather icon' width='50px' height='50px'>
         <p class='h1 m-0 my-auto' id='temperature'>0 °C</p>
       </div>
       <div class=''>

@@ -10,7 +10,6 @@ export default class ElmRoutes extends HTMLElement {
       return this.changePage()
     };
 
-    this._titleApp = document.title;
     this.changePage()
   };
 
@@ -35,8 +34,9 @@ export default class ElmRoutes extends HTMLElement {
   };
 
   languageChange() {
-    this._words = Language.relevant.titles;
-    return this._words
+    this._titles = Language.relevant.titles;
+    this._meta = Language.relevant.meta;
+    return this._meta
   };
 
   changePage() {
@@ -64,17 +64,50 @@ export default class ElmRoutes extends HTMLElement {
   initElm(content, page=null) {
     let template = `${`\n    ${page ? content.replace(
       "TITLE",
-      this._words[page.endpoint]
+      this._titles[page.endpoint]
     ) : null}\n    `}`;
 
     return this.innerHTML = template
   };
 
   initMeta(page) {
-    let title = `${this._words[page.endpoint]} | ${this._titleApp}`;
+    let title = `${this._titles[page.endpoint]} | ${this._meta[0]}`;
 
     // Title
     document.title = title;
+
+    document.querySelector("meta[property=\"og:title\"]").setAttribute(
+      "content",
+      this._meta[0]
+    );
+
+    document.querySelector("meta[name=\"twitter:title\"]").setAttribute(
+      "content",
+      this._meta[0]
+    );
+
+    // Description
+    document.querySelector("meta[name=\"description\"]").setAttribute(
+      "content",
+      this._meta[1]
+    );
+
+    document.querySelector("meta[property=\"og:description\"]").setAttribute(
+      "content",
+      this._meta[1]
+    );
+
+    document.querySelector("meta[name=\"twitter:description\"]").setAttribute(
+      "content",
+      this._meta[1]
+    );
+
+    // Keywords
+    document.querySelector("meta[name=\"keywords\"]").setAttribute(
+      "content",
+      this._meta[2]
+    );
+
     return gtag("event", "search", {searchTerm: page.endpoint})
   }
 }

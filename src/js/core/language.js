@@ -8,12 +8,15 @@ export default class Language {
 
     switch (codeLang) {
     case "cs":
+      Language.setDocumentLang(codeLang);
       return csObj;
 
     case "en":
+      Language.setDocumentLang(codeLang);
       return enObj;
 
     case "es":
+      Language.setDocumentLang(codeLang);
       return esObj;
 
     default:
@@ -29,6 +32,10 @@ export default class Language {
     URLParams.set("lang", codeLang);
     localStorage.setItem("lang", codeLang);
     return Events.emit("#app", Language.ENVS.languageChange)
+  };
+
+  static setDocumentLang(langCode) {
+    return document.documentElement.lang = langCode
   }
 };
 
