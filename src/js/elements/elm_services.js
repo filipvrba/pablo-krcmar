@@ -5,10 +5,10 @@ export default class ElmServices extends HTMLElement {
     this._words = Language.relevant.services;
 
     this._detailElements = [
-      {icon: "bi-car-front-fill", image: {
-        src: ["/jpg/car_02.jpg", "/jpg/car_01.jpg"],
-        alt: "Car rental"
-      }},
+      {
+        icon: "bi-car-front-fill",
+        image: {src: ["/jpg/car_02.jpg"], alt: "Car rental"}
+      },
 
       {
         icon: "bi-house-door-fill",

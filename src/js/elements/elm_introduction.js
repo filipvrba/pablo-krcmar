@@ -23,7 +23,7 @@ export default class ElmIntroduction extends HTMLElement {
     <p class='lead'>${this._words[1]}</p>
   </div>
   <div class='col-md-6 text-center d-flex justify-content-center my-auto'>
-    <elm-lazy-image src='/jpg/avatar_01.jpg' class='max-400' classt='max-400' style='border-radius: 50%;' alt='Pablo Krcmar'></elm-lazy-image>
+    <elm-lazy-image src='/jpg/avatar_02.jpg' class='max-400' classt='max-400' style='border-radius: 50%;' alt='Pablo Krcmar'></elm-lazy-image>
   </div>
 </div>
 
