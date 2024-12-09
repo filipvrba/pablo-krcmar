@@ -18,7 +18,7 @@ export default class ElmServices < HTMLElement
       {
         icon: 'bi-house-door-fill',
         image: {
-          src: ['/jpg/accommodation_01.jpg'],
+          src: ['/jpg/accommodation_02.jpg'],
           alt: 'Accommodations'
         }
       },

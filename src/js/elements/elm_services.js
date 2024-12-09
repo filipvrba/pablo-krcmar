@@ -12,7 +12,7 @@ export default class ElmServices extends HTMLElement {
 
       {
         icon: "bi-house-door-fill",
-        image: {src: ["/jpg/accommodation_01.jpg"], alt: "Accommodations"}
+        image: {src: ["/jpg/accommodation_02.jpg"], alt: "Accommodations"}
       },
 
       {
