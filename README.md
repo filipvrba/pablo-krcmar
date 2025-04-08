@@ -56,7 +56,7 @@ Projekt je postavený na vlastním Vanilla JS frameworku, přičemž vývoj prob
 # Instalace závislostí
 npm install
 
-# Spuštění vývoje s překladem ruby -> js
+# Spuštění vývoje
 npm run dev
 ```
 
