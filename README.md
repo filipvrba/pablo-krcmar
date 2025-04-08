@@ -141,3 +141,7 @@ Více informací a kontakt najdete přímo na webu ve stránce **Contact**.
 Pokud máš jakékoliv dotazy ohledně frameworku nebo jeho využití, otevři issue nebo mě kontaktuj osobně.  
 Díky za zájem a hodně štěstí při vývoji! 🚀
 
+## 🚫 Archivováno
+
+Tento projekt byl archivován a již není aktivně udržován.
+
